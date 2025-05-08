@@ -41,7 +41,7 @@
 
 | Mandelbrot | Julia | Burnship |
 |------------|-------|----------|
-| ![mandelbrot](assets/mandelbrot.png) | ![julia](assets/julia.png) | ![burnship](assets/burnship.png) |
+| ![mandelbrot](assets/Mandelbrot.png) | ![julia](assets/Julia.png) | ![burnship](assets/Burnship.png) |
 
 ---
 
