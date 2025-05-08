@@ -12,37 +12,39 @@
 **Fractol** is a graphical project where I implemented three classic fractals: **Mandelbrot**, **Julia**, and **Burnship**. The goal was to explore mathematical concepts and graphics programming using **complex numbers** and the **MinilibX** library to visualize and interact with these infinite patterns.
 
 ### Fractals Implemented:
-- **Mandelbrot Set:** Defined by the equation `Z(n+1) = Z(n)^2 + C`, where `Z(n)` is iterated starting from 0 and `C` is a constant complex number. The Mandelbrot set is a collection of points `C` in the complex plane for which the iteration does not tend to infinity.
+- **Mandelbrot Set:** Defined by the equation `Z(n+1) = Z(n)^2 + C`, where `Z(n)` starts at `0` and `C` varies across the complex plane. It determines whether the sequence escapes to infinity.
+  
+- **Julia Set:** Same equation `Z(n+1) = Z(n)^2 + C`, but `C` is fixed and `Z(n)` starts at each pixel. The key difference is that Julia uses a constant `C`, while Mandelbrot uses varying `C`.
 
-- **Julia Set:** Also defined by the equation `Z(n+1) = Z(n)^2 + C`, but here `C` is a fixed complex constant, and the iteration starts from each point in the complex plane. The key difference from Mandelbrot is that the constant `C` remains fixed, while in the Mandelbrot set, `C` varies.
-
-- **Burnship Fractal:** Defined by the equation `Z(n+1) = (Re(Z(n))^2 - Im(Z(n))^2 + C_real) + (2*|Re(Z(n))|*|Im(Z(n))| + C_imag) * i`, where `Z(n)` is a complex number, and `C` is a constant. This fractal is similar to the Mandelbrot set but has a different transformation for the complex numbers.
-
-The program allows for interactive visualization and zooming into the fractals. Users can navigate through different parts of the fractals to explore their infinite complexity.
+- **Burnship Fractal:** Defined by `Z(n+1) = (Re(Z)^2 - Im(Z)^2 + C_real) + (2 * |Re(Z)| * |Im(Z)| + C_imag) * i`, applying absolute values before squaring. This creates a flame-like visual, unlike Mandelbrot’s.
 
 > ✅ **Status:** This repository is complete and will not receive further updates.
+
 ---
 
 ## 🇪🇸 Descripción en Español
 
-**Fractol** es un proyecto gráfico desarrollado en **42 Barcelona** en el que implementé tres fractales diferentes: **Mandelbrot**, **Julia** y **Burnship**. El objetivo de este proyecto fue entender y visualizar fractales a través de la programación, además de explorar conceptos clave en la programación gráfica, como:
-- **Números complejos** y su uso para generar fractales
-- **Renderizado gráfico** con bibliotecas como **MinilibX**
-- Conceptos **matemáticos** como la iteración y la recursión
-- **Manejo de eventos** e interactividad gráfica
+**Fractol** es un proyecto gráfico desarrollado en **42 Barcelona** en el que implementé tres fractales diferentes: **Mandelbrot**, **Julia** y **Burnship**. El objetivo fue entender y visualizar fractales mediante la programación de gráficos y el uso de **números complejos** con la librería **MinilibX**.
 
 ### Fractales Implementados:
-- **Conjunto Mandelbrot:** Definido por la ecuación `Z(n+1) = Z(n)^2 + C`, donde `Z(n)` se itera desde 0 y `C` es un número complejo constante. El conjunto de Mandelbrot es un conjunto de puntos `C` en el plano complejo para los cuales la iteración no tiende a infinito.
+- **Conjunto Mandelbrot:** `Z(n+1) = Z(n)^2 + C`, comenzando con `Z = 0` y variando `C`. Determina qué puntos no escapan al infinito.
 
-- **Conjunto Julia:** También definido por la ecuación `Z(n+1) = Z(n)^2 + C`, pero aquí `C` es una constante compleja fija, y la iteración comienza desde cada punto en el plano complejo. La diferencia clave con el conjunto de Mandelbrot es que la constante `C` permanece fija, mientras que en el conjunto Mandelbrot, `C` varía.
+- **Conjunto Julia:** Misma ecuación, pero con `C` fijo y `Z` comenzando en cada punto. La diferencia clave es que `C` no cambia.
 
-- **Fractal Burnship:** Definido por la ecuación `Z(n+1) = (Re(Z(n))^2 - Im(Z(n))^2 + C_real) + (2*|Re(Z(n))|*|Im(Z(n))| + C_imag) * i`, donde `Z(n)` es un número complejo y `C` es una constante. Este fractal es similar al conjunto Mandelbrot, pero tiene una transformación diferente para los números complejos.
+- **Fractal Burnship:** `Z(n+1) = (Re(Z)^2 - Im(Z)^2 + C_real) + (2 * |Re(Z)| * |Im(Z)| + C_imag) * i`. Aplica valores absolutos antes de elevar, generando formas como llamas.
 
-El programa permite la visualización interactiva de los fractales y la capacidad de hacer zoom en sus detalles, permitiendo explorar la complejidad infinita de los fractales.
-
-> ✅ **Estado:** Este repositorio está finalizado y no recibirá más actualizaciones.
+> ✅ **Estado:** Este repositorio está finalizado y no se actualizará, pero su funcionalidad se reutilizará en futuros proyectos.
 
 ---
+
+## 📸 Fractal Gallery
+
+| Mandelbrot | Julia | Burnship |
+|------------|-------|----------|
+| ![mandelbrot](assets/mandelbrot.png) | ![julia](assets/julia.png) | ![burnship](assets/burnship.png) |
+
+---
+
 ## 🧪 How to Use
 
 ```bash
@@ -50,18 +52,25 @@ git clone https://github.com/ineiras/fractol.git
 cd fractol
 make
 ```
+---
+
+## 👾 Run the Program:
+
 ```
-Run the program:
 ./fractol Mandelbrot
 ./fractol Julia <a> <bi>
 ./fractol Ship
 ```
-```
-Use your mouse and keyboard to interact with the fractals:
-Mouse Scroll: Zoom in/out
-Shift + Scorll: Zoom in/out in the point where mouse is pointing
-Arrow Keys: Move the fractal
-Escape: Close Window
-```
+---
+
+## 🖱️ Controls
+
+**Shift + Scroll:** Zoom in/out at the point where the mouse is pointing
+
+**Mouse Scroll:** Zoom in/out centered
+
+**Arrow Keys:** Move around the fractal
+
+**Escape:** Close the window
 
 
